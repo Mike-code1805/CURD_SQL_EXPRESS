@@ -50,23 +50,6 @@ const creatEvent = async (eventdata) => {
   }
 };
 
-// const creatEvent = async (eventdata) => {
-//   try {
-//     let pool = await sql.connect(config.sql);
-//     const sqlQueries = await utils.loadSqlQueries('events');
-//     console.log({ eventdata });
-//     for (const key in eventdata) {
-//       console.log(key, eventdata[key]);
-//       pool.request().input(key, eventdata[key]);
-//     }
-
-//     const insertEvent = await pool.query(sqlQueries.createEvent);
-//     return insertEvent.recordset;
-//   } catch (error) {
-//     return error.message;
-//   }
-// };
-
 const updateEvent = async (eventId, data) => {
   try {
     let pool = await sql.connect(config.sql);

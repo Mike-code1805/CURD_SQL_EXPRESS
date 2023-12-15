@@ -4,7 +4,7 @@ const eventData = require('../data/events');
 
 const getAllEvents = async (req, res, next) => {
     try {
-
+        console.log(req.query);
         const eventlist = await eventData.getEvents();
         res.send(eventlist);        
     } catch (error) {
